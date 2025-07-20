@@ -123,7 +123,7 @@
     });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 700) {
+        if ($(window).scrollTop() > 500) {
             const aboutImg = document.getElementById("about-img")
             const aboutInfo = document.getElementById("about-info")
             aboutImg.style.transform = "translateX(0)"

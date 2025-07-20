@@ -9,7 +9,6 @@ body {
     background: #ffffff;
 }
 
-
 a {
     color: #AF9483;
     transition: 0.5s;
@@ -1183,12 +1182,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about-img {
     transform: translateX(-900px);
-    transition: 1.3s ease-in;
+    transition: 0.67s ease-in;
 }
 
 #about-info {
     transform: translateX(900px);
-    transition: 1.3s ease-in;
+    transition: 0.67s ease-in;
 
 }
 
