@@ -956,7 +956,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .portfolio .portfolio-item figure:hover .portfolio-title ul li {
-    /* list-style-type: none; */
     text-align: start;
     font-size: 14px;
 }

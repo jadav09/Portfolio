@@ -104,13 +104,6 @@
     });
 
 
-    // Skills section
-    // $('.skills').waypoint(function () {
-    //     $('.progress .progress-bar').each(function () {
-    //         $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    //     });
-    // }, { offset: '80%' });
-
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > 1000) {
@@ -155,14 +148,6 @@
         portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
 
-
-    // Testimonials carousel
-    // $(".testimonials-carousel").owlCarousel({
-    //     autoplay: true,
-    //     dots: true,
-    //     loop: true,
-    //     items: 1
-    // });
 
 })(jQuery);
 
