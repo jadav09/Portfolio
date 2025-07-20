@@ -44,6 +44,8 @@
 
         $(document).click(function (e) {
             var container = $("#mobile-nav, #mobile-nav-toggle");
+            console.log("container", container.is(e.target))
+            console.log("container", container.has(e.target).length)
             if (!container.is(e.target) && container.has(e.target).length === 0) {
                 if ($('body').hasClass('mobile-nav-active')) {
                     $('body').removeClass('mobile-nav-active');
@@ -55,6 +57,15 @@
     } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
         $("#mobile-nav, #mobile-nav-toggle").hide();
     }
+
+    // when mobile view close the menu after on click on the li
+    $(document).on('click', '#mobile-nav li a', function (e) {
+        if ($('body').hasClass('mobile-nav-active')) {
+            $('body').removeClass('mobile-nav-active');
+            $('#mobile-nav-toggle i').removeClass('fa-times').addClass('fa-bars');
+            $('#mobile-body-overly').fadeOut();
+        }
+    });
 
 
     // Smooth scrolling on the navbar links
@@ -154,6 +165,20 @@
     // });
 
 })(jQuery);
+
+
+$(window).on('resize', function () {
+    if ($(window).width() > 768) {
+        if ($('body').hasClass('mobile-nav-active')) {
+            $('body').removeClass('mobile-nav-active');
+            $('#mobile-nav-toggle i').removeClass('fa-times').addClass('fa-bars');
+            $('#mobile-body-overly').hide();
+        }
+    }
+});
+
+
+
 
 
 
